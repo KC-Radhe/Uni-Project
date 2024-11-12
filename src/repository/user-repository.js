@@ -9,6 +9,15 @@ class userRepository {
             throw error;
         }
     };
+
+    async getUserBy(elem) {
+        try {
+            const user = await User.findOne(elem);
+            return user;
+        } catch (error) {
+            throw error;
+        }
+    }
 };
 
 module.exports = userRepository;
